@@ -9,7 +9,7 @@ const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'root',
-    database: 'node_crud'
+    database: 'sistemamusical'
 });
 
 connection.connect(function (error) {
@@ -22,18 +22,15 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-
-app.get('/', (req, res) => {
-    res.render('index', {
-        title: 'Sistem de Controle Musical'
-    });
-});
-
 app.use('/', express.static("design"));
 
+app.get('/', (req, res) => {
 
-/*
-app.get('/listar', (req, res) => {
+    res.render('index');
+
+});
+
+/*app.get('/', (req, res) => {
     let sql = "SELECT * FROM users";
     let query = connection.query(sql, (err, rows) => {
         if (err) throw err;
@@ -42,18 +39,16 @@ app.get('/listar', (req, res) => {
             users: rows
         });
     });
-});*/
+});
+*/
 
-
-app.get('/add', (req, res) => {
-    res.render('user_add', {
-        title: 'Adicionar'
-    });
+app.get('/vaiParaMusica', (req, res) => {
+    res.render('musica');
 });
 
 app.post('/save', (req, res) => {
-    let data = { name: req.body.name, email: req.body.email, phone_no: req.body.phone_no };
-    let sql = "INSERT INTO users SET ?";
+    let data = { nome: req.body.nome, duracao: req.body.duracao, artistas: req.body.artistas };
+    let sql = "INSERT INTO musica SET ?";
     let query = connection.query(sql, data, (err, results) => {
         if (err) throw err;
         res.redirect('/');
@@ -75,7 +70,7 @@ app.get('/edit/:userId', (req, res) => {
 
 app.post('/update', (req, res) => {
     const userId = req.body.id;
-    let sql = "update users SET name='" + req.body.name + "',  email='" + req.body.email + "',  phone_no='" + req.body.phone_no + "' where id =" + userId;
+    let sql = "update users SET nome='" + req.body.nome + "',  duracao='" + req.body.duracao + "',  artistas='" + req.body.artistas + "' where id =" + userId;
     let query = connection.query(sql, (err, results) => {
         if (err) throw err;
         res.redirect('/');

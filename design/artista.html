@@ -27,24 +27,24 @@
     <div class="container">
 
       <div class="logo float-left">        
-        <a href="#" class="scrollto"><img src="img/test2/logo.png" width="50" height="50" alt="" class="img-fluid"></a>
+        <a href="#"  class="scrollto"><img src="img/test2/logo.png" width="50" height="50" alt="" class="img-fluid"></a>
       </div>
 
       <nav class="main-nav float-right d-none d-lg-block">
         <ul>
-          
-          <li class="drop-down"><a href="/vaiParaMusica">Músicas</a>
+          <li><a href="index.html">Home</a></li>
+          <li class="drop-down"><a href="musicas.html">Músicas</a>
             <ul>
               <li><a href="musicas.html#buscaMusica">Busca</a></li>              
-              <li><a href="musicas.html">Cadastro</a></li>              
+              <li><a href="musicas.html">Cadastro</a></li>               
             </ul>            
-          </li>   
+          </li>  
           <li class="drop-down"><a href="artista.html">Artistas</a>            
             <ul>
               <li><a href="artista.html#buscaArtista">Busca</a></li>              
               <li><a href="artista.html">Cadastro</a></li>              
             </ul>            
-          </li>   
+          </li> 
           <li class="drop-down"><a href="albuns.html">Álbuns</a>
             <ul>
               <li><a href="albuns.html#buscaAlbum">Busca</a></li>              
@@ -52,52 +52,105 @@
             </ul>            
           </li> 
         </ul>
-      </nav>    
+      </nav>      
     </div>
   </header><!-- #header -->  
 
-  <main id="main">
+  <main id="main">   
     <!--==========================
-      Lançamentos
+      Cadastro e Busca de Artistas
     ============================-->
-    <section id="services" class="section-bg">
-      <div class="container">
+    <section id="contact">
+      <div class="container-fluid">
 
-        <header class="section-header">
-          <h2>Lançamentos</h2>         
-        </header>
-
-        <div class="row">
-
-          <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
-            <div class="box">
-              <img src="img/test2/albun0.jpg" class="img-fluid" alt="">
-            </div>
-          </div>
-
-           <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
-            <div class="box">
-              <img src="img/test2/albun1.jpg" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
-            <div class="box">
-              <img src="img/test2/albun2.jpg" class="img-fluid" alt="">
-            </div>
-          </div>
-
-           <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
-            <div class="box">
-              <img src="img/test2/albun3.jpg" class="img-fluid" alt="">
-            </div>
-          </div>         
-
+        <div class="section-header h3">
+          <h3>Cadastro de Artistas</h3>
         </div>
+
+        <form id="borda">
+          <div  class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" class="form-control" id="nome" placeholder="">
+          </div>
+
+          <div  class="form-group">
+            <label for="nacionalidade">Nacionalidade</label>
+            <input type="text" class="form-control" id="nacionalidade" placeholder="">
+          </div>
+
+          <div class="form-group">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Adicionar Álbuns
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Recovery</a>
+                <a class="dropdown-item" href="#">Use Your Illusion</a>
+                <a class="dropdown-item" href="#">The Massacre</a>
+              </div>              
+            </div><br>    
+
+          <div class="form-group">
+            <label for="albunsAdicionados">Álbuns Adicionados</label>
+            <textarea class="form-control" id="albunsAdicionados" rows="3"></textarea>
+          </div>
+          </div>
+          <button id="btSalvaArtista" type="submit" class="btn btn-primary mb-2">Salvar</button>
+        </form>
+
       </div>
-    </section><!-- #end lançamentos --> 
+
+     <div id="buscaArtista"></div> 
+      <div class="container-fluid">
+        <div class="section-header h3">
+          <h3>Busca de Artistas</h3>
+        </div>
+
+        <form id="borda">
+
+          <div  class="form-group">
+            <label for="nomeBusca">Busca por Nome</label><br>
+            <input type="text" class="form-control" id="nomeBusca" placeholder=""><br>
+            <button id="btBuscaNome" type="submit" class="btn btn-primary mb-2">Buscar</button><br>
+          </div>  
+          
+          <div class="form-group">
+            <label for="nacionalidadeBusca">Busca por Nacionalidade</label><br>
+            <input type="text" class="form-control" id="nacionalidadeBusca" placeholder=""><br>
+            <button id="btBuscaNacionalidade" type="submit" class="btn btn-primary mb-2">Buscar</button><br>
+          </div>          
+          
+          <div class="form-group">
+            <label id="resultado" for="resultado">Resultado ( Ordenação para álbuns )</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="opcao1" checked>
+              <label class="form-check-label" for="exampleRadios1">
+                Nome
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="opcao2">
+              <label class="form-check-label" for="exampleRadios2">
+                Nacionalidade
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+              <label class="form-check-label" for="exampleRadios3">
+                Duração Total
+              </label>
+            </div>
+            <textarea class="form-control" id="resultado" rows="3"></textarea>
+          </div>
+        </form>    
+      </div>
+    </div>
+
+    </section>
+    <!-- end Cadastro e Busca de Artistas -->
 
   </main>
+
   <!--==========================
     Footer
   ============================-->
@@ -110,7 +163,7 @@
             <img src="img/test2/logo.png" width="100" height="100" class="img-fluid" alt=""><br><br>
             <p>Economia para toda família: vem com a gente dançar, ser feliz e economizar! Todo mundo ainda mais feliz com 3 meses de músicas grátis! Milhões de músicas. Todos os dispositivos. Online e offline.</p>
           </div>
-
+         
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Links Úteis</h4>
             <ul>
@@ -118,7 +171,7 @@
               <li><a href="musicas.html">Músicas</a></li>
               <li><a href="artista.html">Artistas</a></li>
               <li><a href="albuns.html">Álbuns</a></li>              
-              <li><a href="#services">Lançamentos</a></li>              
+              <li><a href="index.html#services">Lançamentos</a></li>                
             </ul>
           </div>
 
@@ -159,8 +212,7 @@
     </div>
   </footer><!-- #footer -->
 
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
- 
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>  
   <style> img[alt="www.000webhost.com"] {display: none;} </style>
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/jquery/jquery-migrate.min.js"></script>
@@ -172,8 +224,8 @@
   <script src="lib/counterup/counterup.min.js"></script>
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
   <script src="lib/isotope/isotope.pkgd.min.js"></script>
-  <script src="lib/lightbox/js/lightbox.min.js"></script> 
-  <script src="contactform/contactform.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>  
+  <script src="contactform/contactform.js"></script>  
   <script src="js/main.js"></script>
 
 </body>

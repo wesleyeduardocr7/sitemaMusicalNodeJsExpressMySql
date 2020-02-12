@@ -32,19 +32,19 @@
 
       <nav class="main-nav float-right d-none d-lg-block">
         <ul>
-          
-          <li class="drop-down"><a href="/vaiParaMusica">Músicas</a>
+          <li><a href="index.html">Home</a></li>
+          <li class="drop-down"><a href="musicas.html">Músicas</a>
             <ul>
               <li><a href="musicas.html#buscaMusica">Busca</a></li>              
               <li><a href="musicas.html">Cadastro</a></li>              
             </ul>            
-          </li>   
+          </li> 
           <li class="drop-down"><a href="artista.html">Artistas</a>            
             <ul>
               <li><a href="artista.html#buscaArtista">Busca</a></li>              
               <li><a href="artista.html">Cadastro</a></li>              
             </ul>            
-          </li>   
+          </li> 
           <li class="drop-down"><a href="albuns.html">Álbuns</a>
             <ul>
               <li><a href="albuns.html#buscaAlbum">Busca</a></li>              
@@ -52,52 +52,104 @@
             </ul>            
           </li> 
         </ul>
-      </nav>    
+      </nav>      
     </div>
   </header><!-- #header -->  
 
   <main id="main">
+   
     <!--==========================
-      Lançamentos
+      Cadastro e Busca de Albuns
     ============================-->
-    <section id="services" class="section-bg">
-      <div class="container">
+    <section id="contact">
 
-        <header class="section-header">
-          <h2>Lançamentos</h2>         
-        </header>
+      <div class="container-fluid">
 
-        <div class="row">
-
-          <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
-            <div class="box">
-              <img src="img/test2/albun0.jpg" class="img-fluid" alt="">
-            </div>
-          </div>
-
-           <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
-            <div class="box">
-              <img src="img/test2/albun1.jpg" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
-            <div class="box">
-              <img src="img/test2/albun2.jpg" class="img-fluid" alt="">
-            </div>
-          </div>
-
-           <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
-            <div class="box">
-              <img src="img/test2/albun3.jpg" class="img-fluid" alt="">
-            </div>
-          </div>         
-
+        <div class="section-header h3">
+          <h3>Cadastro de Álbuns</h3>
         </div>
+
+        <form id="borda">
+
+          <div  class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" class="form-control" id="nome" placeholder="">
+          </div>
+          
+          <div class="form-group">
+            <label for="ano">Ano</label>
+            <input type="number" class="form-control" id="ano" placeholder="1999">
+          </div>
+
+          <div class="form-group">
+            <label for="duracaoTotal">Duração Total</label>
+            <input type="number" class="form-control" id="duracaoTotal" placeholder="00:00">
+          </div>
+
+          <div class="form-group">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Adicionar Músicas
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">8 mile</a>
+                <a class="dropdown-item" href="#">Patience</a>
+                <a class="dropdown-item" href="#">Ambition</a>
+              </div>              
+            </div><br>    
+
+          <div class="form-group">
+            <label for="musicasAdicionados">Músicas Adcionadas</label>
+            <textarea class="form-control" id="musicasAdicionados" rows="3"></textarea>
+          </div>
+
+          <div class="form-group">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Adicionar Artistas
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">50 Cent</a>
+                <a class="dropdown-item" href="#">Eminem</a>
+                <a class="dropdown-item" href="#">Guns N' Roses</a>
+              </div>              
+            </div><br>   
+            
+            
+          <div class="form-group">
+            <label for="artistasAdicionados">Artistas Adcionados</label>
+            <textarea class="form-control" id="artistasAdicionados" rows="3"></textarea>
+          </div>
+
+          </div>
+          <button id="btSalvaArtistas" type="submit" class="btn btn-primary mb-2">Salvar</button>
+        </form> 
       </div>
-    </section><!-- #end lançamentos --> 
+
+     <div id="buscaAlbum"></div> 
+      <div class="container-fluid">
+        <div class="section-header h3">
+          <h3>Busca de Álbuns</h3>
+        </div>
+
+        <form id="borda">
+          <div class="form-group">
+            <label for="nome">Informe o nome abaixo</label><br>
+            <input type="text" class="form-control" id="nome" placeholder=""><br>
+            <button id="btSalvaMusica" type="submit" class="btn btn-primary mb-2">Buscar</button><br>
+          </div>          
+          <div class="form-group">
+            <label id="resultado" for="exampleFormControlTextarea1">Resultado</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+        </form>    
+      </div>
+    </div>
+    </section>
+    <!-- end Cadastro e Busca de Albuns-->
 
   </main>
+
   <!--==========================
     Footer
   ============================-->
@@ -110,7 +162,7 @@
             <img src="img/test2/logo.png" width="100" height="100" class="img-fluid" alt=""><br><br>
             <p>Economia para toda família: vem com a gente dançar, ser feliz e economizar! Todo mundo ainda mais feliz com 3 meses de músicas grátis! Milhões de músicas. Todos os dispositivos. Online e offline.</p>
           </div>
-
+        
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Links Úteis</h4>
             <ul>
@@ -118,7 +170,7 @@
               <li><a href="musicas.html">Músicas</a></li>
               <li><a href="artista.html">Artistas</a></li>
               <li><a href="albuns.html">Álbuns</a></li>              
-              <li><a href="#services">Lançamentos</a></li>              
+              <li><a href="index.html#services">Lançamentos</a></li>               
             </ul>
           </div>
 
@@ -159,8 +211,7 @@
     </div>
   </footer><!-- #footer -->
 
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
- 
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>  
   <style> img[alt="www.000webhost.com"] {display: none;} </style>
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/jquery/jquery-migrate.min.js"></script>
@@ -172,7 +223,7 @@
   <script src="lib/counterup/counterup.min.js"></script>
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
   <script src="lib/isotope/isotope.pkgd.min.js"></script>
-  <script src="lib/lightbox/js/lightbox.min.js"></script> 
+  <script src="lib/lightbox/js/lightbox.min.js"></script>  
   <script src="contactform/contactform.js"></script>
   <script src="js/main.js"></script>
 

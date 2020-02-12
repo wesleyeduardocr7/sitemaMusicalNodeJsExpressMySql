@@ -32,19 +32,19 @@
 
       <nav class="main-nav float-right d-none d-lg-block">
         <ul>
-          
-          <li class="drop-down"><a href="/vaiParaMusica">Músicas</a>
+          <li><a href="index.html">Home</a></li>
+          <li class="drop-down"><a href="musicas.html">Músicas</a>
             <ul>
               <li><a href="musicas.html#buscaMusica">Busca</a></li>              
-              <li><a href="musicas.html">Cadastro</a></li>              
+              <li><a href="musicas.html">Cadastro</a></li>             
             </ul>            
-          </li>   
+          </li>  
           <li class="drop-down"><a href="artista.html">Artistas</a>            
             <ul>
               <li><a href="artista.html#buscaArtista">Busca</a></li>              
               <li><a href="artista.html">Cadastro</a></li>              
             </ul>            
-          </li>   
+          </li> 
           <li class="drop-down"><a href="albuns.html">Álbuns</a>
             <ul>
               <li><a href="albuns.html#buscaAlbum">Busca</a></li>              
@@ -52,52 +52,64 @@
             </ul>            
           </li> 
         </ul>
-      </nav>    
+      </nav>      
     </div>
   </header><!-- #header -->  
 
   <main id="main">
+   
     <!--==========================
-      Lançamentos
+      Cadastro e Busca de Músicas
     ============================-->
-    <section id="services" class="section-bg">
-      <div class="container">
+    <section id="contact">
+      <div class="container-fluid">
 
-        <header class="section-header">
-          <h2>Lançamentos</h2>         
-        </header>
-
-        <div class="row">
-
-          <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
-            <div class="box">
-              <img src="img/test2/albun0.jpg" class="img-fluid" alt="">
-            </div>
-          </div>
-
-           <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
-            <div class="box">
-              <img src="img/test2/albun1.jpg" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
-            <div class="box">
-              <img src="img/test2/albun2.jpg" class="img-fluid" alt="">
-            </div>
-          </div>
-
-           <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
-            <div class="box">
-              <img src="img/test2/albun3.jpg" class="img-fluid" alt="">
-            </div>
-          </div>         
-
+        <div class="section-header h3">
+          <h3>Cadastro de Músicas</h3>
         </div>
+
+        <form id="borda" action="/save" method="post">
+            <div class="form-group">
+              <label for="nome">Nome:</label>
+              <input type="text" class="form-control" id="nome" placeholder="Digite o Nome" name="nome" required>
+            </div>
+            <div class="form-group">
+              <label for="duracao">Duração:</label>
+              <input type="text" class="form-control" id="duracao" placeholder="Digite a Duração" name="duracao" required>
+            </div>
+            <div class="form-group">
+              <label for="artistas">Artistas:</label>
+              <input type="text" class="form-control" id="artistas" placeholder="Digite o Artista" name="artistas" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
       </div>
-    </section><!-- #end lançamentos --> 
+
+     <div id="buscaMusica"></div> 
+      <div class="container-fluid">
+        <div class="section-header h3">
+          <h3>Busca de Músicas</h3>
+        </div>
+
+        <form id="borda">
+          <div class="form-group">
+            <label for="nomeBusca">Informe o nome abaixo</label><br>
+            <input type="text" class="form-control" id="nomeBusca" placeholder=""><br>
+            <button id="btBuscaMusica" type="submit" class="btn btn-primary mb-2">Buscar</button><br>
+          </div>          
+          <div class="form-group">
+            <label id="resultado" for="exampleFormControlTextarea1">Resultado</label>
+            <textarea class="form-control" id="resultado" rows="3"></textarea>
+          </div>
+        </form>    
+      </div>
+    </div>
+
+    </section>
+    <!-- #end cadastro e busca de musicas -->
 
   </main>
+
   <!--==========================
     Footer
   ============================-->
@@ -118,7 +130,7 @@
               <li><a href="musicas.html">Músicas</a></li>
               <li><a href="artista.html">Artistas</a></li>
               <li><a href="albuns.html">Álbuns</a></li>              
-              <li><a href="#services">Lançamentos</a></li>              
+              <li><a href="index.html#services">Lançamentos</a></li>              
             </ul>
           </div>
 
@@ -159,8 +171,7 @@
     </div>
   </footer><!-- #footer -->
 
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
- 
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a> 
   <style> img[alt="www.000webhost.com"] {display: none;} </style>
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/jquery/jquery-migrate.min.js"></script>
@@ -172,7 +183,7 @@
   <script src="lib/counterup/counterup.min.js"></script>
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
   <script src="lib/isotope/isotope.pkgd.min.js"></script>
-  <script src="lib/lightbox/js/lightbox.min.js"></script> 
+  <script src="lib/lightbox/js/lightbox.min.js"></script>  
   <script src="contactform/contactform.js"></script>
   <script src="js/main.js"></script>
 
