@@ -1,191 +1,257 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="utf-8">
-  <title>Sistema Musical</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
 
-  <link href="img/test2/logo.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+<head>
+    <meta charset="utf-8">
+    <title>Sistema Musical</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <link href="img/test2/logo.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700"
+        rel="stylesheet">
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-  <!--==========================
+    <!--==========================
   Header
   ============================-->
-  <header id="header" class="fixed-top">
-    <div class="container">
+    <header id="header" class="fixed-top">
+        <div class="container">
 
-      <div class="logo float-left">        
-        <a href="#" class="scrollto"><img src="img/test2/logo.png" width="50" height="50" alt="" class="img-fluid"></a>
-      </div>
+            <div class="logo float-left">
+                <a href="#" class="scrollto"><img src="img/test2/logo.png" width="50" height="50" alt=""
+                        class="img-fluid"></a>
+            </div>
 
-      <nav class="main-nav float-right d-none d-lg-block">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li class="drop-down"><a href="musicas.html">Músicas</a>
-            <ul>
-              <li><a href="musicas.html#buscaMusica">Busca</a></li>              
-              <li><a href="musicas.html">Cadastro</a></li>             
-            </ul>            
-          </li>  
-          <li class="drop-down"><a href="artista.html">Artistas</a>            
-            <ul>
-              <li><a href="artista.html#buscaArtista">Busca</a></li>              
-              <li><a href="artista.html">Cadastro</a></li>              
-            </ul>            
-          </li> 
-          <li class="drop-down"><a href="albuns.html">Álbuns</a>
-            <ul>
-              <li><a href="albuns.html#buscaAlbum">Busca</a></li>              
-              <li><a href="albuns.html">Cadastro</a></li>              
-            </ul>            
-          </li> 
-        </ul>
-      </nav>      
-    </div>
-  </header><!-- #header -->  
+            <nav class="main-nav float-right d-none d-lg-block">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="drop-down"><a href="musicas.html">Músicas</a>
+                        <ul>
+                            <li><a href="musicas.html#buscaMusica">Busca</a></li>
+                            <li><a href="musicas.html">Cadastro</a></li>
+                        </ul>
+                    </li>
+                    <li class="drop-down"><a href="artista.html">Artistas</a>
+                        <ul>
+                            <li><a href="artista.html#buscaArtista">Busca</a></li>
+                            <li><a href="artista.html">Cadastro</a></li>
+                        </ul>
+                    </li>
+                    <li class="drop-down"><a href="albuns.html">Álbuns</a>
+                        <ul>
+                            <li><a href="albuns.html#buscaAlbum">Busca</a></li>
+                            <li><a href="albuns.html">Cadastro</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header><!-- #header -->
 
-  <main id="main">
-   
-    <!--==========================
+    <main id="main">
+
+        <!--==========================
       Cadastro e Busca de Músicas
     ============================-->
-    <section id="contact">
-      <div class="container-fluid">
+        <section id="contact">
+            <div class="container-fluid">
 
-        <div class="section-header h3">
-          <h3>Cadastro de Músicas</h3>
-        </div>
+                <div class="section-header h3">
+                    <h3>Cadastro de Músicas</h3>
+                </div>
 
-        <form id="borda" action="/save" method="post">
-            <div class="form-group">
-              <label for="nome">Nome:</label>
-              <input type="text" class="form-control" id="nome" placeholder="Digite o Nome" name="nome" required>
+                <form id="borda" action="/save" method="post">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Digite o Nome" name="nome"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="duracao">Duração:</label>
+                        <input type="text" class="form-control" id="duracao" placeholder="Digite a Duração"
+                            name="duracao" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="artistas">Artistas:</label>
+                        <textarea class="form-control" id="artistas" id="artistas" placeholder="Digite o Artista"
+                            name="artistas" required rows="3"></textarea>
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary">Adicionar</button>
+                </form>
             </div>
-            <div class="form-group">
-              <label for="duracao">Duração:</label>
-              <input type="text" class="form-control" id="duracao" placeholder="Digite a Duração" name="duracao" required>
+
+
+            <div id="buscaMusica"></div>
+            <div class="container-fluid">
+                <div class="section-header h3">
+                    <h3>Lista de Músicas</h3>
+                </div>
+
+                <div class="container">
+                    <table class="table table-dark table-striped">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Duração</th>
+                                <th>Artistas</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% musica.forEach(function(valor){ %>
+                            <tr>
+                                <td><%= valor.nome %></td>
+                                <td><%= valor.duracao %></td>
+                                <td><%= valor.artistas %></td>
+                                <td>
+                                    <a href="edit/<%= musica.id %>" class="btn btn-sm btn-primary">Editar</a>
+                                    <a href="delete/<%= musica.id %>" class="btn btn-sm btn-danger">Deletar</a>
+                                </td>
+                            </tr>
+                            <% }); %>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="buscaMusica"></div>
+                <div class="container-fluid">
+                    <div class="section-header h3">
+                        <h3>Busca de Músicas</h3>
+                    </div>
+
+                    <form action="/update" method="post">
+                        <input type="hidden" value="<%= musica.id %>" name="id">
+                        <div class="form-group">
+                            <label for="nome">Nome:</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Enter Name"
+                                value="<%= musica.nome %>" name="nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="duracao">Duração:</label>
+                            <input type="text" class="form-control" id="duracao" placeholder="Enter Duration"
+                                value="<%= musica.duracao %>" name="duracao" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="artistas">Artistas:</label>
+                            <textarea class="form-control" id="artistas" placeholder="Digite o Artista"
+                            value="<%= musica.artistas %>" name="artistas" required rows="3"></textarea>
+                        </div>
+
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+
+                </div>
             </div>
-            <div class="form-group">
-              <label for="artistas">Artistas:</label>
-              <input type="text" class="form-control" id="artistas" placeholder="Digite o Artista" name="artistas" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-      </div>
 
-     <div id="buscaMusica"></div> 
-      <div class="container-fluid">
-        <div class="section-header h3">
-          <h3>Busca de Músicas</h3>
-        </div>
+        </section>
+        <!-- #end cadastro e busca de musicas -->
 
-        <form id="borda">
-          <div class="form-group">
-            <label for="nomeBusca">Informe o nome abaixo</label><br>
-            <input type="text" class="form-control" id="nomeBusca" placeholder=""><br>
-            <button id="btBuscaMusica" type="submit" class="btn btn-primary mb-2">Buscar</button><br>
-          </div>          
-          <div class="form-group">
-            <label id="resultado" for="exampleFormControlTextarea1">Resultado</label>
-            <textarea class="form-control" id="resultado" rows="3"></textarea>
-          </div>
-        </form>    
-      </div>
-    </div>
+    </main>
 
-    </section>
-    <!-- #end cadastro e busca de musicas -->
-
-  </main>
-
-  <!--==========================
+    <!--==========================
     Footer
   ============================-->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
 
-          <div class="col-lg-4 col-md-6 footer-info">
-            <img src="img/test2/logo.png" width="100" height="100" class="img-fluid" alt=""><br><br>
-            <p>Economia para toda família: vem com a gente dançar, ser feliz e economizar! Todo mundo ainda mais feliz com 3 meses de músicas grátis! Milhões de músicas. Todos os dispositivos. Online e offline.</p>
-          </div>
+                    <div class="col-lg-4 col-md-6 footer-info">
+                        <img src="img/test2/logo.png" width="100" height="100" class="img-fluid" alt=""><br><br>
+                        <p>Economia para toda família: vem com a gente dançar, ser feliz e economizar! Todo mundo ainda
+                            mais feliz com 3 meses de músicas grátis! Milhões de músicas. Todos os dispositivos. Online
+                            e offline.</p>
+                    </div>
 
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Links Úteis</h4>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="musicas.html">Músicas</a></li>
-              <li><a href="artista.html">Artistas</a></li>
-              <li><a href="albuns.html">Álbuns</a></li>              
-              <li><a href="index.html#services">Lançamentos</a></li>              
-            </ul>
-          </div>
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Links Úteis</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="musicas.html">Músicas</a></li>
+                            <li><a href="artista.html">Artistas</a></li>
+                            <li><a href="albuns.html">Álbuns</a></li>
+                            <li><a href="index.html#services">Lançamentos</a></li>
+                        </ul>
+                    </div>
 
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>Contato</h4>
-            <p>
-              Av Joaquim Mochel, SN - Turu <br>
-              São Luís - MA, Brasil<br>           
-              <strong>Telefone:</strong> 98 98165-0805<br>
-              <strong>Email:</strong> wesley@gmail.com<br>
-            </p>
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h4>Contato</h4>
+                        <p>
+                            Av Joaquim Mochel, SN - Turu <br>
+                            São Luís - MA, Brasil<br>
+                            <strong>Telefone:</strong> 98 98165-0805<br>
+                            <strong>Email:</strong> wesley@gmail.com<br>
+                        </p>
 
-            <div class="social-links">
-              <a href="https://twitter.com/WesleyE37358405" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a>
-              <a href="https://www.facebook.com/wesleyeduardo.589" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a>
-              <a href="https://www.instagram.com/wesleyeduardo.ti/" target="_blank" class="instagram"><i class="fa fa-instagram"></i></a>
-              <a href="https://www.youtube.com/channel/UCaiTtl5rG1VzCui10UkAOwg?view_as=subscriber" target="_blank" class="google-plus"><i class="fa fa-youtube"></i></a>              
+                        <div class="social-links">
+                            <a href="https://twitter.com/WesleyE37358405" target="_blank" class="twitter"><i
+                                    class="fa fa-twitter"></i></a>
+                            <a href="https://www.facebook.com/wesleyeduardo.589" target="_blank" class="facebook"><i
+                                    class="fa fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/wesleyeduardo.ti/" target="_blank" class="instagram"><i
+                                    class="fa fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/channel/UCaiTtl5rG1VzCui10UkAOwg?view_as=subscriber"
+                                target="_blank" class="google-plus"><i class="fa fa-youtube"></i></a>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-newsletter">
+                        <h4>Inscreva-se</h4>
+                        <p>1 mês grátis para assinantes novos que nunca ativaram nenhum teste ou promoção anterior. Esta
+                            oferta não pode ser combinada com nenhuma outra e pode ser usada apenas uma vez</p>
+                        <form action="" method="post">
+                            <input type="email" name="email"><input type="submit" value="Inscrever">
+                        </form>
+                    </div>
+
+                </div>
             </div>
-
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-newsletter">
-            <h4>Inscreva-se</h4>
-            <p>1 mês grátis para assinantes novos que nunca ativaram nenhum teste ou promoção anterior. Esta oferta não pode ser combinada com nenhuma outra e pode ser usada apenas uma vez</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit"  value="Inscrever">
-            </form>
-          </div>
-
         </div>
-      </div>
-    </div>
 
-    <div class="container">      
-      <div class="credits">      
-        Designed by <a href="https://wesleyeduardo.com.br/" target="_blank">Herbert Leone e Wesley Eduardo</a>
-      </div>
-    </div>
-  </footer><!-- #footer -->
+        <div class="container">
+            <div class="credits">
+                Designed by <a href="https://wesleyeduardo.com.br/" target="_blank">Herbert Leone e Wesley Eduardo</a>
+            </div>
+        </div>
+    </footer><!-- #footer -->
 
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a> 
-  <style> img[alt="www.000webhost.com"] {display: none;} </style>
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/mobile-nav/mobile-nav.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/waypoints/waypoints.min.js"></script>
-  <script src="lib/counterup/counterup.min.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/isotope/isotope.pkgd.min.js"></script>
-  <script src="lib/lightbox/js/lightbox.min.js"></script>  
-  <script src="contactform/contactform.js"></script>
-  <script src="js/main.js"></script>
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <style>
+        img[alt="www.000webhost.com"] {
+            display: none;
+        }
+    </style>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery-migrate.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/mobile-nav/mobile-nav.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="contactform/contactform.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
+
 </html>

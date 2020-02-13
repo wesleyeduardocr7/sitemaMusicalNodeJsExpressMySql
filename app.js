@@ -24,23 +24,22 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/', express.static("design"));
 
-app.get('/', (req, res) => {
+/*app.get('/', (req, res) => {
 
     res.render('index');
 
-});
+});*/
 
-/*app.get('/', (req, res) => {
-    let sql = "SELECT * FROM users";
+app.get('/', (req, res) => {
+    let sql = "SELECT * FROM musica";
     let query = connection.query(sql, (err, rows) => {
         if (err) throw err;
-        res.render('user_index', {
-            title: 'CRUD Operation using NodeJS / ExpressJS / MySQL',
-            users: rows
+        res.render('musica', {            
+            musica: rows
         });
     });
 });
-*/
+
 
 app.get('/vaiParaMusica', (req, res) => {
     res.render('musica');
@@ -55,22 +54,21 @@ app.post('/save', (req, res) => {
     });
 });
 
-app.get('/edit/:userId', (req, res) => {
-    const userId = req.params.userId;
-    let sql = `Select * from users where id = ${userId}`;
+app.get('/edit/:musicaId', (req, res) => {
+    const musicaId = req.params.musicaId;
+    let sql = `Select * from musica where id = ${musicaId}`;
     let query = connection.query(sql, (err, result) => {
         if (err) throw err;
-        res.render('user_edit', {
-            title: 'Editar',
-            user: result[0]
+        res.render('musica', {          
+            musica: result[0]
         });
     });
 });
 
 
 app.post('/update', (req, res) => {
-    const userId = req.body.id;
-    let sql = "update users SET nome='" + req.body.nome + "',  duracao='" + req.body.duracao + "',  artistas='" + req.body.artistas + "' where id =" + userId;
+    const musicaId = req.body.id;
+    let sql = "update users SET nome='" + req.body.nome + "',  duracao='" + req.body.duracao + "',  artistas='" + req.body.artistas + "' where id =" + musicaId;
     let query = connection.query(sql, (err, results) => {
         if (err) throw err;
         res.redirect('/');
@@ -78,9 +76,9 @@ app.post('/update', (req, res) => {
 });
 
 
-app.get('/delete/:userId', (req, res) => {
-    const userId = req.params.userId;
-    let sql = `DELETE from users where id = ${userId}`;
+app.get('/delete/:musicaId', (req, res) => {
+    const musicaId = req.params.musicaId;
+    let sql = `DELETE from users where id = ${musicaId}`;
     let query = connection.query(sql, (err, result) => {
         if (err) throw err;
         res.redirect('/');
